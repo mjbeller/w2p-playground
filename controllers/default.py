@@ -14,8 +14,8 @@ def manage_dogs():
     return locals()
     
 def manage_owners():
-    if 'view' in request.args:
-        gridTitle = 'Dog'
+    #if 'view' in request.args:
+    #    gridTitle = 'Dog'
     form = SQLFORM.smartgrid(db.t_owner)
     return locals()
     

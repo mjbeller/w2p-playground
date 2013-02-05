@@ -14,8 +14,8 @@ def manage_dogs():
     return locals()
     
 def manage_owners():
-    if 'view' in request.args:
-        gridTitle = 'Dog'
+    #if 'view' in request.args:
+    #    gridTitle = 'Dog'
     form = SQLFORM.smartgrid(db.t_owner)
     return locals()
     
@@ -81,5 +81,4 @@ def data():
     or with the signed load operator
       LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
     """
-    LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
     return dict(form=crud())
